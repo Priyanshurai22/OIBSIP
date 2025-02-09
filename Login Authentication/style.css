@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    text-align: center;
+}
+body{
+    background-image: url(back.jpg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    background-position: right;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.wrapper h1{
+    font-size: 100px;
+    font-weight: bold;
+    word-spacing: 10px;
+}
+.wrapper h1 span{
+    font-size: 110px;
+    font-weight: 500;
+    word-spacing: 5px;
+}
+.wrapper form{
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    background: transparent;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 8px 18px cyan;
+}
+.wrapper form input::placeholder{
+    color: black;
+    font-family:cursive;
+    text-align: center;
+    opacity: 0.6;
+}
+.wrapper input{
+    font-size: 17px;
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    margin-bottom: 20px;
+}
+.wrapper input:hover{
+    border: 5px solid cyan;
+    transform: scale(1.1);
+    margin-left: 8px;
+}
+.wrapper input:focus{
+    border: 3px solid cyan;
+}
+.wrapper form button{
+    margin-top: 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background: cyan;
+}
+.wrapper form button:hover{
+    transform: scale(1.2);
+}
+.wrapper label svg{
+    margin-top: 15px;
+    background: white;
+    border-radius: 50px;
+    padding: 2px;
+}
+form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper label{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+}
+.wrapper label svg:hover{
+    transform: scale(1.2);
+}
+.wrapper p{
+    border: 2px solid black;
+    margin-top: 30px;
+    font-size: 18px;
+    background-color: white;
+    padding: 7px;
+    border-radius: 20px;
+}
+.wrapper p:hover{
+    transform: scale(1.3);
+}
+
+form div.incorrect label svg{
+    background:red;
+}
+form div.incorrect input{
+    border: 3px solid red;
+    background: indianred;
+}
+
+#error-mess{
+    color: red;
+    font-size: 14px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+
+
+@media(max-width: 460px){
+    .wrapper h1{
+        font-size: 70px;
+        word-spacing: 5px;
+    }
+    .wrapper h1 span{
+        font-size: 100px;
+        font-weight: 500;
+        word-spacing: 5px;
+    }
+    .wrapper input{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+}
