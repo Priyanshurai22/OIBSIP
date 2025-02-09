@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --base-color: white;
+    --base-variant: #717377;
+    --text-color: black;
+    --primary-color: aqua;
+    --secondary-color: orange;
+    --background-color: linear-gradient(45deg, #0a0a0a, #3a4452 );
+    --box-shadow1: rgba(84, 84, 84, 0.1);
+    --box-shadow2: rgba(255, 255, 255, 0.3);
+}
+
+.lightmode{
+    --base-color: black;
+    --background-color: white;
+    --base-variant: orange;
+    --secondary-color: orange;
+    --primary-color: red;
+    --text-color: black;
+    --box-shadow1:black;
+    --box-shadow2: grey;
+
+}
+
+#toggle{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    top: 20px;
+    right: 20px;
+}
+#toggle svg{
+    fill: var(--primary-color);
+}
+#toggle svg:last-child{
+    display: none;
+}
+.lightmode #toggle svg:first-child{
+    display: none;
+}
+.lightmode #toggle svg:last-child{
+    display: block;
+}
+
+
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+
+}
+
+.calculator{
+    border: 5px solid var(--base-variant);
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px var(--primary-color);
+}
+
+input{
+    width: 340px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px var(--box-shadow1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: var(--base-color);
+}
+
+input::placeholder{
+    color: var(--base-color);
+}
+
+button{
+    border: none;
+    width: 70px;
+    height: 60px;
+    margin: 10px;
+    background: transparent;
+    color: var(--base-color);
+    border-radius: 30%;
+    font-size: 24px;
+    box-shadow: -8px -8px 15px var(--box-shadow2);
+    cursor: pointer;
+}
+.operatorbtn{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+.modebtn{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+
+}
+
+#mode{
+    background: var(--background-color);
+    position: fixed;
+    z-index: 99999;
+    border-radius: 10%;
+}
+
+
+/* Responsivenessss...................................................................................... */
+
+@media (max-width:485px) {
+
+    input{
+        width: 250px;
+        font-size: 25px;
+    }  
+    
+    button{
+        width: 50px;
+        height: 40px;
+        margin: 7px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width:345px) {
+
+    input{
+        width: 180px;
+        font-size: 18px;
+    }  
+    
+    button{
+        width: 30px;
+        height: 20px;
+        margin: 7px;
+        font-size: 12px;
+    }
+}
